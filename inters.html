@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>StellarScript — Every Star Has a Story</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;900&family=Nunito:ital,wght@0,300;0,400;0,600;0,700;1,300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="inter.css">
+</head>
+<body>
+    
+<!--background-->
+<div class="cursor-dot" id="cDot"></div>
+<div class="cursor-ring" id="cRing"></div>
+<div id="bg-parallax"></div>
+<div id="nebula-bg"></div>
+<div id="aurora"></div>
+<canvas id="star-canvas"></canvas>
+<div id="depth-fog"></div>
+
+<!-- NAV -->
+<nav id="navbar">
+  <a href="#" class="nav-logo"><span class="logo-star">✦</span>StellarScript</a>
+  <ul class="nav-links">
+    <li><a href="#constellations">Constellations</a></li>
+    <li><a href="#solar">Solar System</a></li>
+    <li><a href="#planets">Planets</a></li>
+    <li><a href="#universe">Universe</a></li>
+    <li><a href="#about">About</a></li>
+
+  </ul>
+  <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<div class="mobile-menu" id="mobile-menu">
+  <a href="#constellations" class="mobile-nav-link">Constellations</a>
+  <a href="#solar" class="mobile-nav-link">Solar System</a>
+  <a href="#planets" class="mobile-nav-link">Planets</a>
+  <a href="#universe" class="mobile-nav-link">Universe</a>
+  <a href="#about" class="mobile-nav-link">About</a>
+  <div class="mobile-divider"></div>
+  <a href="#newsletter" class="mobile-nav-link mobile-cta">✦ Subscribe</a>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-3d">
+    <div class="h-planet hp1"></div>
+    <div class="h-planet hp2"></div>
+    <div class="lf lf1"><svg width="60" height="60" viewBox="0 0 60 60"><defs><filter id="lf1f"><feGaussianBlur stdDeviation="3"/></filter></defs><circle cx="30" cy="30" r="2" fill="rgba(255,209,102,0.9)" filter="url(#lf1f)"/><line x1="30" y1="5" x2="30" y2="55" stroke="rgba(255,209,102,0.3)" stroke-width="0.5"/><line x1="5" y1="30" x2="55" y2="30" stroke="rgba(255,209,102,0.3)" stroke-width="0.5"/></svg></div>
+    <div class="lf lf2"><svg width="40" height="40" viewBox="0 0 40 40"><circle cx="20" cy="20" r="1.5" fill="rgba(160,184,255,0.9)"/><circle cx="20" cy="20" r="8" fill="none" stroke="rgba(160,184,255,0.2)" stroke-width="0.5"/><circle cx="20" cy="20" r="15" fill="none" stroke="rgba(160,184,255,0.1)" stroke-width="0.5"/></svg></div>
+    <div class="lf lf3"><svg width="30" height="30" viewBox="0 0 30 30"><circle cx="15" cy="15" r="1" fill="rgba(45,212,191,0.9)"/><line x1="15" y1="0" x2="15" y2="30" stroke="rgba(45,212,191,0.4)" stroke-width="0.5"/><line x1="0" y1="15" x2="30" y2="15" stroke="rgba(45,212,191,0.4)" stroke-width="0.5"/></svg></div>
+  </div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">A Celestial Journey</div>
+    <h1 class="hero-title">Every Star<br>Has a <em>Story</em></h1>
+    <p class="hero-sub">Exploring constellations, planets, and the vast universe — where the cosmos meets the written word.</p>
+    <div class="hero-btns">
+      <a href="#constellations" class="hero-btn hbp">Explore the Night <span class="btn-icon">→</span></a>
+      <a href="#planets" class="hero-btn hbs">Our Planets <span class="btn-icon">✦</span></a>
+    </div>
+    
+</section>
+
+<div class="star-divider"><div class="star-divider-icon">✦ ✦ ✦</div></div>
+
+<!-- CONSTELLATIONS -->
+<section class="constellations-section" id="constellations">
+  <div class="section-wrap">
+    <div class="fade-in">
+      <div class="section-eyebrow">✦ Featured</div>
+      <h2 class="section-title">Celestial Constellations</h2>
+      <p class="section-sub">Ancient patterns written in starlight — each one a chapter in humanity's oldest storybook.</p>
+    </div>
+
+    <svg width="0" height="0" style="position:absolute">
+      <defs>
+        <filter id="sg"><feGaussianBlur stdDeviation="1.5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+        <filter id="sgb"><feGaussianBlur stdDeviation="3.5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+      </defs>
+    </svg>
+
+    <div class="const-grid">
+      <!-- Orion -->
+      <div class="card-scene"><div class="anime-card fade-in" data-tilt>
+        <div class="glow-strip gs-blue"></div>
+        <div class="card-visual">
+          <div class="card-bg-anime ab-orion"></div>
+          <canvas class="cpart" width="300" height="210"></canvas>
+          <svg class="card-svg" viewBox="0 0 120 120">
+            <line class="const-line" x1="60" y1="20" x2="50" y2="40"/><line class="const-line" x1="60" y1="20" x2="70" y2="40"/>
+            <line class="const-line" x1="50" y1="40" x2="40" y2="60"/><line class="const-line" x1="70" y1="40" x2="80" y2="60"/>
+            <line class="const-line" x1="40" y1="60" x2="45" y2="75"/><line class="const-line" x1="80" y1="60" x2="75" y2="75"/>
+            <line class="const-line" x1="40" y1="60" x2="80" y2="60"/><line class="const-line" x1="50" y1="40" x2="70" y2="40"/>
+            <line class="const-line" x1="48" y1="58" x2="60" y2="62"/><line class="const-line" x1="60" y1="62" x2="72" y2="58"/>
+            <circle class="star-dot" cx="60" cy="20" r="3.5"/><circle class="star-dot" cx="50" cy="40" r="2.5" fill="#fbbf24"/>
+            <circle class="star-dot" cx="70" cy="40" r="2"/><circle class="star-dot" cx="40" cy="60" r="3.5" fill="#93c5fd"/>
+            <circle class="star-dot" cx="80" cy="60" r="2.5"/><circle class="star-dot" cx="48" cy="58" r="2"/>
+            <circle class="star-dot" cx="60" cy="62" r="2"/><circle class="star-dot" cx="72" cy="58" r="2"/>
+            <circle class="star-dot" cx="45" cy="75" r="2.5"/><circle class="star-dot" cx="75" cy="75" r="2.5" fill="#f87171"/>
+          </svg>
+        </div>
+        <div class="card-body"><span class="card-tag">Mythology</span><div class="card-title">Orion, the Hunter</div><p class="card-desc">The mighty hunter stands eternal in the winter sky. His three-star belt has guided sailors and dreamers for ten thousand years.</p><span class="card-read"></span></div>
+      </div></div>
+
+      <!-- Cassiopeia -->
+      <div class="card-scene"><div class="anime-card fade-in" data-tilt style="transition-delay:0.1s">
+        <div class="glow-strip gs-gold"></div>
+        <div class="card-visual">
+          <div class="card-bg-anime ab-cassiopeia"></div>
+          <canvas class="cpart" width="300" height="210"></canvas>
+          <svg class="card-svg" viewBox="0 0 120 120">
+            <line class="const-line" x1="20" y1="70" x2="35" y2="50"/><line class="const-line" x1="35" y1="50" x2="55" y2="65"/>
+            <line class="const-line" x1="55" y1="65" x2="75" y2="45"/><line class="const-line" x1="75" y1="45" x2="95" y2="60"/>
+            <circle class="star-dot" cx="20" cy="70" r="2.5"/><circle class="star-dot" cx="35" cy="50" r="3.5" fill="#fbbf24"/>
+            <circle class="star-dot" cx="55" cy="65" r="2.5"/><circle class="star-dot" cx="75" cy="45" r="3"/><circle class="star-dot" cx="95" cy="60" r="2.5"/>
+          </svg>
+        </div>
+        <div class="card-body"><span class="card-tag" style="color:var(--gold);background:rgba(255,209,102,0.08);border-color:rgba(255,209,102,0.25);">Queen of Aethiopia</span><div class="card-title">Cassiopeia's Crown</div><p class="card-desc">Shaped like a W in the northern sky, the vain queen Cassiopeia reigns eternally — circling the pole without ever setting below the horizon.</p><span class="card-read" style="color:var(--gold)"></span></div>
+      </div></div>
+
+      <!-- Ursa -->
+      <div class="card-scene"><div class="anime-card fade-in" data-tilt style="transition-delay:0.2s">
+        <div class="glow-strip gs-purple"></div>
+        <div class="card-visual">
+          <div class="card-bg-anime ab-ursa"></div>
+          <canvas class="cpart" width="300" height="210"></canvas>
+          <svg class="card-svg" viewBox="0 0 120 120">
+            <line class="const-line" x1="30" y1="75" x2="45" y2="65"/><line class="const-line" x1="45" y1="65" x2="60" y2="68"/>
+            <line class="const-line" x1="60" y1="68" x2="75" y2="60"/><line class="const-line" x1="75" y1="60" x2="85" y2="45"/>
+            <line class="const-line" x1="85" y1="45" x2="80" y2="30"/><line class="const-line" x1="80" y1="30" x2="65" y2="35"/>
+            <line class="const-line" x1="65" y1="35" x2="75" y2="60"/>
+            <circle class="star-dot" cx="30" cy="75" r="2.5"/><circle class="star-dot" cx="45" cy="65" r="2.5"/>
+            <circle class="star-dot" cx="60" cy="68" r="2"/><circle class="star-dot" cx="75" cy="60" r="2.5"/>
+            <circle class="star-dot" cx="85" cy="45" r="3.5" fill="#fbbf24"/><circle class="star-dot" cx="80" cy="30" r="2.5"/>
+            <circle class="star-dot" cx="65" cy="35" r="2.5"/>
+          </svg>
+        </div>
+        <div class="card-body"><span class="card-tag" style="color:#c084fc;background:rgba(139,92,246,0.1);border-color:rgba(139,92,246,0.25);">Navigation</span><div class="card-title">Ursa Major — The Great Bear</div><p class="card-desc">Home to the famous Big Dipper, Ursa Major has pointed generations of travellers toward the North Star, whispering the way home.</p><span class="card-read" style="color:#c084fc"></span></div>
+      </div></div>
+
+      <!-- Scorpius -->
+      <div class="card-scene"><div class="anime-card fade-in" data-tilt style="transition-delay:0.3s">
+        <div class="glow-strip gs-rose"></div>
+        <div class="card-visual">
+          <div class="card-bg-anime ab-scorpius"></div>
+          <canvas class="cpart" width="300" height="210"></canvas>
+          <svg class="card-svg" viewBox="0 0 120 120">
+            <line class="const-line" x1="60" y1="20" x2="58" y2="35"/><line class="const-line" x1="58" y1="35" x2="62" y2="48"/>
+            <line class="const-line" x1="62" y1="48" x2="58" y2="62"/><line class="const-line" x1="58" y1="62" x2="55" y2="75"/>
+            <line class="const-line" x1="55" y1="75" x2="50" y2="85"/><line class="const-line" x1="50" y1="85" x2="55" y2="92"/>
+            <line class="const-line" x1="55" y1="92" x2="65" y2="90"/>
+            <circle class="star-dot" cx="60" cy="20" r="2"/><circle class="star-dot" cx="58" cy="35" r="2"/>
+            <circle class="star-dot" cx="62" cy="48" r="4" fill="#f87171"/><circle class="star-dot" cx="58" cy="62" r="2"/>
+            <circle class="star-dot" cx="55" cy="75" r="2"/><circle class="star-dot" cx="50" cy="85" r="2.5"/>
+            <circle class="star-dot" cx="55" cy="92" r="2"/><circle class="star-dot" cx="65" cy="90" r="2.5"/>
+          </svg>
+        </div>
+        <div class="card-body"><span class="card-tag" style="color:#fb7185;background:rgba(244,63,94,0.08);border-color:rgba(244,63,94,0.25);">Summer Sky</span><div class="card-title">Scorpius & Antares</div><p class="card-desc">The great scorpion blazes in the summer sky, its heart marked by the red supergiant Antares — a star 700 times the size of our sun.</p><span class="card-read" style="color:#fb7185"></span></div>
+      </div></div>
+
+      <!-- Lyra -->
+      <div class="card-scene"><div class="anime-card fade-in" data-tilt style="transition-delay:0.4s">
+        <div class="glow-strip gs-teal"></div>
+        <div class="card-visual">
+          <div class="card-bg-anime ab-lyra"></div>
+          <canvas class="cpart" width="300" height="210"></canvas>
+          <svg class="card-svg" viewBox="0 0 120 120">
+            <line class="const-line" x1="60" y1="25" x2="45" y2="55"/><line class="const-line" x1="60" y1="25" x2="75" y2="55"/>
+            <line class="const-line" x1="45" y1="55" x2="50" y2="75"/><line class="const-line" x1="75" y1="55" x2="70" y2="75"/>
+            <line class="const-line" x1="50" y1="75" x2="70" y2="75"/><line class="const-line" x1="45" y1="55" x2="75" y2="55"/>
+            <circle class="star-dot" cx="60" cy="25" r="4.5" fill="#34d399"/>
+            <circle class="star-dot" cx="45" cy="55" r="2"/><circle class="star-dot" cx="75" cy="55" r="2"/>
+            <circle class="star-dot" cx="50" cy="75" r="2.5"/><circle class="star-dot" cx="70" cy="75" r="2.5"/>
+          </svg>
+        </div>
+        <div class="card-body"><span class="card-tag" style="color:#2dd4bf;background:rgba(45,212,191,0.08);border-color:rgba(45,212,191,0.25);">Music of the Spheres</span><div class="card-title">Lyra & Vega</div><p class="card-desc">Orpheus's lyre, placed among the stars by Zeus. Its brightest jewel, Vega, will become Earth's north star in 14,000 years.</p><span class="card-read" style="color:#2dd4bf"></span></div>
+      </div></div>
+
+      <!-- Andromeda -->
+      <div class="card-scene"><div class="anime-card fade-in" data-tilt style="transition-delay:0.5s">
+        <div class="glow-strip gs-amber"></div>
+        <div class="card-visual">
+          <div class="card-bg-anime ab-andromeda"></div>
+          <canvas class="cpart" width="300" height="210"></canvas>
+          <svg class="card-svg" viewBox="0 0 120 120">
+            <line class="const-line" x1="30" y1="60" x2="50" y2="55"/><line class="const-line" x1="50" y1="55" x2="70" y2="50"/>
+            <line class="const-line" x1="70" y1="50" x2="90" y2="45"/><line class="const-line" x1="50" y1="55" x2="45" y2="38"/>
+            <line class="const-line" x1="45" y1="38" x2="40" y2="25"/><line class="const-line" x1="70" y1="50" x2="72" y2="70"/>
+            <line class="const-line" x1="72" y1="70" x2="75" y2="85"/>
+            <ellipse cx="88" cy="30" rx="8" ry="5" fill="rgba(251,191,36,0.15)" stroke="rgba(251,191,36,0.3)" stroke-width="0.7"/>
+            <circle class="star-dot" cx="30" cy="60" r="3.5" fill="#fbbf24"/>
+            <circle class="star-dot" cx="50" cy="55" r="2.5"/><circle class="star-dot" cx="70" cy="50" r="2.5"/>
+            <circle class="star-dot" cx="90" cy="45" r="2"/><circle class="star-dot" cx="45" cy="38" r="2"/>
+            <circle class="star-dot" cx="40" cy="25" r="2.5"/><circle class="star-dot" cx="72" cy="70" r="2"/>
+            <circle class="star-dot" cx="75" cy="85" r="2"/>
+          </svg>
+        </div>
+        <div class="card-body"><span class="card-tag" style="color:#fbbf24;background:rgba(251,191,36,0.08);border-color:rgba(251,191,36,0.25);">Galaxy</span><div class="card-title">Andromeda & Her Galaxy</div><p class="card-desc">Chained to the rocks yet carrying an entire galaxy within her borders — our nearest cosmic neighbour, visible to the naked eye.</p><span class="card-read" style="color:#fbbf24"></span></div>
+      </div></div>
+    </div>
+  </div>
+</section>
+
+<div class="star-divider"><div class="star-divider-icon">✦ ✦ ✦</div></div>
+
+<!-- ════ SOLAR SYSTEM DIAGRAM ════ -->
+<section class="solar-section" id="solar">
+  <div class="section-wrap">
+    <div class="fade-in">
+      <div class="section-eyebrow">✦ Our Star System</div>
+      <h2 class="section-title">The Solar System</h2>
+      <p class="section-sub">Eight planets bound by gravity to our Sun — each a unique world of extremes, beauty, and mystery. Hover a planet to learn its name; click to jump to its card.</p>
+    </div>
+    <div class="solar-container fade-in" id="solarSystem">
+      <!-- Sun -->
+      <div class="solar-sun" title="The Sun"></div>
+      <!-- Orbits and planets injected by JS -->
+    </div>
+  </div>
+</section>
+
+<div class="star-divider"><div class="star-divider-icon">✦ ✦ ✦</div></div>
+
+<!-- PLANETS -->
+<section class="planets-section" id="planets">
+  <div class="section-wrap">
+    <div class="fade-in">
+      <div class="section-eyebrow">✦ Solar System</div>
+      <h2 class="section-title">Our Planetary Family</h2>
+      <p class="section-sub">Eight worlds orbiting a single star — each one a universe of its own, sculpted by time, gravity, and fire.</p>
+    </div>
+    <div class="planets-grid">
+
+      <!-- Mercury -->
+      <div class="card-scene"><div class="planet-card mc fade-in" data-tilt id="card-mercury">
+        <div class="glow-strip gs-blue"></div>
+        <div class="planet-visual"><div class="planet-bg-glow"></div><div class="planet-sphere mercury-sp"></div></div>
+        <div class="planet-body"><div class="planet-name">Mercury</div><span class="planet-type">Terrestrial</span><p class="planet-desc">The swift messenger — closest to the Sun, scorched by day and frozen by night, with no atmosphere to soften either extreme.</p><div class="planet-stats"><div class="pstat"><span class="pstat-val">88d</span><span class="pstat-key">Orbit</span></div><div class="pstat"><span class="pstat-val">430°C</span><span class="pstat-key">Max Temp</span></div></div></div>
+      </div></div>
+
+      <!-- Venus -->
+      <div class="card-scene"><div class="planet-card vc fade-in" data-tilt id="card-venus" style="transition-delay:0.05s">
+        <div class="glow-strip gs-amber"></div>
+        <div class="planet-visual"><div class="planet-bg-glow"></div><div class="planet-sphere venus-sp"></div></div>
+        <div class="planet-body"><div class="planet-name">Venus</div><span class="planet-type">Terrestrial</span><p class="planet-desc">Brilliant sister of Earth, wrapped in toxic clouds that trap heat into a hellish greenhouse — the brightest object after the Moon.</p><div class="planet-stats"><div class="pstat"><span class="pstat-val">225d</span><span class="pstat-key">Orbit</span></div><div class="pstat"><span class="pstat-val">465°C</span><span class="pstat-key">Avg Temp</span></div></div></div>
+      </div></div>
+
+      <!-- Earth -->
+      <div class="card-scene"><div class="planet-card ec fade-in" data-tilt id="card-earth" style="transition-delay:0.1s">
+        <div class="glow-strip gs-cyan"></div>
+        <div class="planet-visual"><div class="planet-bg-glow"></div><div class="planet-sphere earth-sp"></div></div>
+        <div class="planet-body"><div class="planet-name">Earth</div><span class="planet-type">Our Home</span><p class="planet-desc">The pale blue dot. Third from the Sun and the only world where life has taken root, written stories, and looked upward in wonder.</p><div class="planet-stats"><div class="pstat"><span class="pstat-val">365d</span><span class="pstat-key">Orbit</span></div><div class="pstat"><span class="pstat-val">15°C</span><span class="pstat-key">Avg Temp</span></div></div></div>
+      </div></div>
+
+      <!-- Mars -->
+      <div class="card-scene"><div class="planet-card rc fade-in" data-tilt id="card-mars" style="transition-delay:0.15s">
+        <div class="glow-strip gs-rose"></div>
+        <div class="planet-visual"><div class="planet-bg-glow"></div><div class="planet-sphere mars-sp"></div></div>
+        <div class="planet-body"><div class="planet-name">Mars</div><span class="planet-type">Terrestrial</span><p class="planet-desc">The Red Planet — cratered deserts, the tallest volcano in the solar system, and dust storms that swallow continents.</p><div class="planet-stats"><div class="pstat"><span class="pstat-val">687d</span><span class="pstat-key">Orbit</span></div><div class="pstat"><span class="pstat-val">−60°C</span><span class="pstat-key">Avg Temp</span></div></div></div>
+      </div></div>
+
+      <!-- Jupiter -->
+      <div class="card-scene"><div class="planet-card jc fade-in" data-tilt id="card-jupiter" style="transition-delay:0.2s">
+        <div class="glow-strip gs-gold"></div>
+        <div class="planet-visual"><div class="planet-bg-glow"></div><div class="planet-sphere jupiter-sp"></div></div>
+        <div class="planet-body"><div class="planet-name">Jupiter</div><span class="planet-type">Gas Giant</span><p class="planet-desc">King of planets — a swirling colossus 1,300 Earths wide, its Great Red Spot a storm raging for over 350 years.</p><div class="planet-stats"><div class="pstat"><span class="pstat-val">12yr</span><span class="pstat-key">Orbit</span></div><div class="pstat"><span class="pstat-val">95</span><span class="pstat-key">Moons</span></div></div></div>
+      </div></div>
+
+      <!-- Saturn -->
+      <div class="card-scene"><div class="planet-card sc fade-in" data-tilt id="card-saturn" style="transition-delay:0.25s">
+        <div class="glow-strip gs-amber"></div>
+        <div class="planet-visual"><div class="planet-bg-glow"></div><div class="saturn-ring-wrap"><div class="saturn-ring"></div></div><div class="planet-sphere saturn-sp"></div></div>
+        <div class="planet-body"><div class="planet-name">Saturn</div><span class="planet-type">Gas Giant</span><p class="planet-desc">The jewel of the solar system, adorned with rings spanning 282,000 km. Light enough to float on water.</p><div class="planet-stats"><div class="pstat"><span class="pstat-val">29yr</span><span class="pstat-key">Orbit</span></div><div class="pstat"><span class="pstat-val">146</span><span class="pstat-key">Moons</span></div></div></div>
+      </div></div>
+
+      <!-- Uranus -->
+      <div class="card-scene"><div class="planet-card uc fade-in" data-tilt id="card-uranus" style="transition-delay:0.3s">
+        <div class="glow-strip gs-teal"></div>
+        <div class="planet-visual"><div class="planet-bg-glow"></div><div class="planet-sphere uranus-sp"></div></div>
+        <div class="planet-body"><div class="planet-name">Uranus</div><span class="planet-type">Ice Giant</span><p class="planet-desc">The sideways planet — orbiting the Sun tilted almost completely on its side, as if knocked down by an ancient collision.</p><div class="planet-stats"><div class="pstat"><span class="pstat-val">84yr</span><span class="pstat-key">Orbit</span></div><div class="pstat"><span class="pstat-val">−224°C</span><span class="pstat-key">Avg Temp</span></div></div></div>
+      </div></div>
+
+      <!-- Neptune -->
+      <div class="card-scene"><div class="planet-card nc fade-in" data-tilt id="card-neptune" style="transition-delay:0.35s">
+        <div class="glow-strip gs-blue"></div>
+        <div class="planet-visual"><div class="planet-bg-glow"></div><div class="planet-sphere neptune-sp"></div></div>
+        <div class="planet-body"><div class="planet-name">Neptune</div><span class="planet-type">Ice Giant</span><p class="planet-desc">The windiest world — winds of 2,100 km/h scour its deep blue surface. The only planet predicted before it was observed.</p><div class="planet-stats"><div class="pstat"><span class="pstat-val">165yr</span><span class="pstat-key">Orbit</span></div><div class="pstat"><span class="pstat-val">16</span><span class="pstat-key">Moons</span></div></div></div>
+      </div></div>
+
+    </div>
+  </div>
+</section>
+
+<div class="star-divider"><div class="star-divider-icon">✦ ✦ ✦</div></div>
+
+<!-- UNIVERSE -->
+<section class="universe-section" id="universe">
+  <div class="section-wrap">
+    <div class="universe-intro fade-in">
+      <div class="universe-text">
+        <div class="section-eyebrow">✦ The Cosmos</div>
+        <h2 class="section-title">Beyond the<br><em style="font-family:'Cinzel',serif;font-style:italic;color:var(--lavender)">Observable</em></h2>
+        <p class="universe-lead">The universe is 93 billion light-years wide — and growing. It is 13.8 billion years old, made almost entirely of things we cannot see, cannot touch, and have only begun to imagine.</p>
+        <div class="universe-fact">
+          <div class="ufact-row"><div class="ufact-dot"></div><span>There are more stars in the universe than grains of sand on every beach on Earth.</span></div>
+          <div class="ufact-row"><div class="ufact-dot"></div><span>95% of the universe is dark matter and dark energy — invisible forces holding everything together.</span></div>
+          <div class="ufact-row"><div class="ufact-dot"></div><span>Every atom in your body was forged inside a dying star. You are, literally, made of the cosmos.</span></div>
+          <div class="ufact-row"><div class="ufact-dot"></div><span>The universe has no centre — every point in space sees every other point moving away from it.</span></div>
+        </div>
+      </div>
+      <div class="universe-timeline-visual">
+        <div class="bigbang-wrap">
+          <svg viewBox="0 0 340 340" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <radialGradient id="bbg" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#f0c987" stop-opacity="0.9"/><stop offset="25%" stop-color="#e2c97e" stop-opacity="0.5"/><stop offset="60%" stop-color="#6366f1" stop-opacity="0.2"/><stop offset="100%" stop-color="#020510" stop-opacity="0"/></radialGradient>
+              <radialGradient id="cg" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#ffffff" stop-opacity="1"/><stop offset="40%" stop-color="#f0c987" stop-opacity="0.9"/><stop offset="100%" stop-color="#e2c97e" stop-opacity="0.2"/></radialGradient>
+              <filter id="bbf"><feGaussianBlur stdDeviation="8"/></filter>
+              <filter id="cgf"><feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+            </defs>
+            <circle cx="170" cy="170" r="160" fill="url(#bbg)" filter="url(#bbf)"/>
+            <circle cx="170" cy="170" r="140" fill="none" stroke="rgba(165,180,252,0.06)" stroke-width="1"><animate attributeName="r" values="10;140" dur="4s" repeatCount="indefinite"/><animate attributeName="stroke-opacity" values="0.5;0" dur="4s" repeatCount="indefinite"/></circle>
+            <circle cx="170" cy="170" r="110" fill="none" stroke="rgba(226,201,126,0.08)" stroke-width="1"><animate attributeName="r" values="10;110" dur="4s" begin="1s" repeatCount="indefinite"/><animate attributeName="stroke-opacity" values="0.4;0" dur="4s" begin="1s" repeatCount="indefinite"/></circle>
+            <circle cx="170" cy="170" r="80" fill="none" stroke="rgba(165,180,252,0.1)" stroke-width="1"><animate attributeName="r" values="10;80" dur="4s" begin="2s" repeatCount="indefinite"/><animate attributeName="stroke-opacity" values="0.6;0" dur="4s" begin="2s" repeatCount="indefinite"/></circle>
+            <g stroke="rgba(226,201,126,0.2)" stroke-width="0.8">
+              <line x1="170" y1="170" x2="170" y2="30"><animate attributeName="stroke-opacity" values="0;0.3;0" dur="3s" repeatCount="indefinite"/></line>
+              <line x1="170" y1="170" x2="170" y2="310"><animate attributeName="stroke-opacity" values="0;0.3;0" dur="3s" begin="0.4s" repeatCount="indefinite"/></line>
+              <line x1="170" y1="170" x2="30" y2="170"><animate attributeName="stroke-opacity" values="0;0.3;0" dur="3s" begin="0.8s" repeatCount="indefinite"/></line>
+              <line x1="170" y1="170" x2="310" y2="170"><animate attributeName="stroke-opacity" values="0;0.3;0" dur="3s" begin="1.2s" repeatCount="indefinite"/></line>
+            </g>
+            <g fill="white">
+              <circle cx="60" cy="80" r="1.5" opacity="0.6"><animate attributeName="opacity" values="0.6;1;0.6" dur="2.1s" repeatCount="indefinite"/></circle>
+              <circle cx="290" cy="100" r="1" opacity="0.5"><animate attributeName="opacity" values="0.5;1;0.5" dur="1.7s" repeatCount="indefinite"/></circle>
+              <circle cx="80" cy="280" r="1.5" opacity="0.7"><animate attributeName="opacity" values="0.7;1;0.7" dur="2.5s" repeatCount="indefinite"/></circle>
+              <circle cx="300" cy="260" r="1" opacity="0.4"><animate attributeName="opacity" values="0.4;1;0.4" dur="1.9s" repeatCount="indefinite"/></circle>
+            </g>
+            <circle cx="170" cy="170" r="55" fill="rgba(99,102,241,0.12)" filter="url(#bbf)"/>
+            <circle cx="170" cy="170" r="22" fill="url(#cg)" filter="url(#cgf)"><animate attributeName="r" values="18;24;18" dur="2.5s" repeatCount="indefinite"/></circle>
+            <circle cx="170" cy="170" r="8" fill="white" opacity="0.9"><animate attributeName="opacity" values="0.9;0.5;0.9" dur="1.5s" repeatCount="indefinite"/><animate attributeName="r" values="8;10;8" dur="1.5s" repeatCount="indefinite"/></circle>
+            <text x="170" y="310" text-anchor="middle" fill="rgba(226,201,126,0.6)" font-family="Cinzel,serif" font-size="9" letter-spacing="3">THE BIG BANG</text>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <div class="universe-cards">
+      <div class="card-scene"><div class="uni-card ubang fade-in" data-tilt><div class="glow-strip gs-gold"></div><div class="uni-icon">💥</div><span class="uni-label">Origin</span><div class="uni-title">The Big Bang</div><p class="uni-desc">13.8 billion years ago, all of space, time, matter, and energy erupted from a singularity smaller than an atom. In the first three minutes, the light elements were forged. The universe has been expanding ever since.</p><div class="uni-stat-row"><div class="uni-stat"><span class="uni-stat-num">13.8B</span><span class="uni-stat-label">Years Old</span></div><div class="uni-stat"><span class="uni-stat-num">~0</span><span class="uni-stat-label">Initial Size</span></div></div><span class="uni-read">Explore the Origin →</span></div></div>
+      <div class="card-scene"><div class="uni-card ubh fade-in" data-tilt style="transition-delay:0.1s"><div class="glow-strip gs-purple"></div><div class="uni-icon">🕳️</div><span class="uni-label">Singularities</span><div class="uni-title">Black Holes</div><p class="uni-desc">Where gravity becomes so extreme that not even light escapes. At their hearts lies a singularity — a point where our understanding of physics breaks down and the known universe ends.</p><div class="uni-stat-row"><div class="uni-stat"><span class="uni-stat-num">4M☉</span><span class="uni-stat-label">Sgr A* Mass</span></div><div class="uni-stat"><span class="uni-stat-num">∞</span><span class="uni-stat-label">Core Density</span></div></div><span class="uni-read">Into the Event Horizon →</span></div></div>
+      <div class="card-scene"><div class="uni-card uneb fade-in" data-tilt style="transition-delay:0.2s"><div class="glow-strip gs-teal"></div><div class="uni-icon">🌌</div><span class="uni-label">Stellar Nurseries</span><div class="uni-title">Nebulae</div><p class="uni-desc">Vast clouds of gas and dust — birthplaces and graveyards of stars. The Pillars of Creation inside the Eagle Nebula are columns of gas over four light-years tall, sculpting new suns from their tips.</p><div class="uni-stat-row"><div class="uni-stat"><span class="uni-stat-num">7ly</span><span class="uni-stat-label">Pillars Height</span></div><div class="uni-stat"><span class="uni-stat-num">6,500ly</span><span class="uni-stat-label">Distance</span></div></div><span class="uni-read">Enter the Nursery →</span></div></div>
+      <div class="card-scene"><div class="uni-card udark fade-in" data-tilt style="transition-delay:0.3s"><div class="glow-strip gs-amber"></div><div class="uni-icon">🌑</div><span class="uni-label">The Invisible</span><div class="uni-title">Dark Matter</div><p class="uni-desc">27% of the universe is made of something we cannot see, touch, or detect directly — yet its gravity holds galaxies together. It is the scaffolding upon which all visible matter is draped.</p><div class="uni-stat-row"><div class="uni-stat"><span class="uni-stat-num">27%</span><span class="uni-stat-label">Of Universe</span></div><div class="uni-stat"><span class="uni-stat-num">0</span><span class="uni-stat-label">Direct Detections</span></div></div><span class="uni-read">The Unseen Web →</span></div></div>
+      <div class="card-scene"><div class="uni-card ugal fade-in" data-tilt style="transition-delay:0.4s"><div class="glow-strip gs-rose"></div><div class="uni-icon">🌀</div><span class="uni-label">Island Universes</span><div class="uni-title">Galaxies</div><p class="uni-desc">There are an estimated two trillion galaxies in the observable universe, each containing hundreds of billions of stars. Our Milky Way is a middling barred spiral — one tiny island in an ocean of light.</p><div class="uni-stat-row"><div class="uni-stat"><span class="uni-stat-num">2T</span><span class="uni-stat-label">Galaxies</span></div><div class="uni-stat"><span class="uni-stat-num">100K ly</span><span class="uni-stat-label">Milky Way Width</span></div></div><span class="uni-read">Across the Cosmos →</span></div></div>
+      <div class="card-scene"><div class="uni-card uexp fade-in" data-tilt style="transition-delay:0.5s"><div class="glow-strip gs-purple"></div><div class="uni-icon">📡</div><span class="uni-label">Ever-Expanding</span><div class="uni-title">Cosmic Expansion</div><p class="uni-desc">Space itself is stretching. Galaxies far enough away recede from us faster than light — not because they travel through space, but because the space between them grows. The universe has no edge, yet it is finite.</p><div class="uni-stat-row"><div class="uni-stat"><span class="uni-stat-num">73</span><span class="uni-stat-label">km/s per Mpc</span></div><div class="uni-stat"><span class="uni-stat-num">68%</span><span class="uni-stat-label">Dark Energy</span></div></div><span class="uni-read">The Expanding Void →</span></div></div>
+    </div>
+  </div>
+</section>
+
+<div class="star-divider"><div class="star-divider-icon">✦ ✦ ✦</div></div>
+
+<!-- ABOUT -->
+<section class="about-section" id="about">
+  <div class="section-wrap">
+    <div class="about-inner">
+      <div class="about-visual fade-in">
+        <div class="about-orb-sc"><div class="about-orb">
+          <div class="ring-1 orb-ring"></div><div class="ring-2 orb-ring"></div><div class="ring-3 orb-ring"></div>
+          <div class="orb-star"></div><div class="orb-star"></div><div class="orb-star"></div><div class="orb-star"></div>
+          <div class="orb-center">🌙</div>
+        </div></div>
+      </div>
+      <div class="fade-in" style="transition-delay:0.2s">
+        <div class="section-eyebrow">✦ About This Blog</div>
+        <h2 class="section-title">Written in<br><em style="font-family:'Cinzel',serif;font-style:italic;color:var(--lavender)">Starlight</em></h2>
+        <blockquote class="about-quote">"We are all made of star-stuff — and StellarScript is where that story is told."</blockquote>
+        <div class="about-body">
+          <p>StellarScript was born on a clear December night when the <strong>Geminids</strong> rained across the sky and every streak of light felt like an unfinished sentence.</p>
+          <p>Here you will find <strong>constellation mythology</strong>, planetary science, and the deep mysteries of the universe — told with wonder, precision, and a poet's eye.</p>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="star-divider"><div class="star-divider-icon">✦ ✦ ✦</div></div>
+
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <a href="#" class="brand-logo"><span style="color:var(--gold);font-size:0.9rem">✦</span>StellarScript</a>
+      <p class="footer-tagline">A celestial blog exploring the myths, science, and poetry written across the night sky.</p>
+      <div class="footer-social">
+        <a href="#" class="social-btn">𝕏</a><a href="#" class="social-btn">◎</a>
+        <a href="#" class="social-btn">⊕</a><a href="#" class="social-btn">✉</a>
+      </div>
+    </div>
+    <div class="footer-col"><h4>Explore</h4><div class="footer-links"><a href="#">Constellations</a><a href="#">Planets</a><a href="#">Universe</a><a href="#">Guides</a></div></div>
+    <div class="footer-col"><h4>Topics</h4><div class="footer-links"><a href="#">Mythology</a><a href="#">Deep Sky</a><a href="#">Science</a><a href="#">Archive</a></div></div>
+    <div class="footer-col"><h4>About</h4><div class="footer-links"><a href="#">The Blog</a><a href="#">Newsletter</a><a href="#">Contact</a><a href="#">Privacy</a></div></div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-bottom-left"><span>✦</span> © 2026 Hans Buenafe. All rights reserved.</div>
+    <div style="font-size:0.45rem;color:var(--text-muted);letter-spacing:0.5rem;opacity:0.3;">✦ ✦ ✦ ✦ ✦</div>
+    <div style="font-size:0.72rem;color:var(--text-muted)">Made with starlight ✦</div>
+  </div>
+</footer>
+ <script src="inter.js"></script>
+</body>
+</html>
